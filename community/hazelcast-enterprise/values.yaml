@@ -27,7 +27,7 @@ hazelcast:
   # licenseKey is the Hazelcast Enterprise License Key (always required to run Hazelcast Enterprise)
   licenseKey:
   # licenseKeySecretName is the name of the secret where the Hazelcast Enterprise License Key is stored (can be used instead of licenseKey)
-  # licenseKeySecretName:
+  licenseKeySecretName:
   # rest is a flag used to enable REST endpoints for Hazelcast member
   rest: true
   # javaOpts are additional JAVA_OPTS properties for Hazelcast member
@@ -64,7 +64,7 @@ hazelcast:
 
 # nodeSelector is an array of Hazelcast Node labels for POD assignments
 # ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector
-nodeSelector: {}
+# nodeSelector: {}
 
 # Hazelcast Liveness probe
 livenessProbe:
@@ -158,11 +158,11 @@ mancenter:
   # if not provided, it can be filled in the Management Center web interface
   licenseKey:
   # licenseKeySecretName is the name of the secret where the Hazelcast Management Center License Key is stored (can be used instead of licenseKey)
-  # licenseKeySecretName:
+  licenseKeySecretName:
 
   # nodeSelector is an array of Hazelcast Management Center Node labels for POD assignments
   # ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector
-  nodeSelector: {}
+  # nodeSelector: {}
 
   # Configure resource requests and limits
   # ref: http://kubernetes.io/docs/user-guide/compute-resources/
@@ -178,7 +178,7 @@ mancenter:
     enabled: true
     # existingClaim is a name of the existing Persistence Volume Claim that will be used for persistence
     # if not defined, a new Persistent Value Claim is created with the default name
-    # existingClaim:
+    existingClaim:
     # accessModes defines the access modes for the created Persistent Volume Claim
     accessModes:
     - ReadWriteOnce
