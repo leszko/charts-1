@@ -10,5 +10,5 @@ metadata:
     heritage: "{{ .Release.Service }}"
 data:
   hazelcast.xml: |-
-{{ .Values.hazelcast.configurationFiles.hazelcast.xml | indent 4}}
+{{ ".Values.hazelcast.configurationFiles.hazelcast.xml" | indent 4}}
 {{- end -}}
