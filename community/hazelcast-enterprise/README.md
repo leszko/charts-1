@@ -124,12 +124,12 @@ $ helm install --name my-release -f values.yaml hazelcast/hazelcast-enterprise
 
 ## Custom Hazelcast configuration
 
-Custom Hazelcast configuration can be specified inside `values.yaml`, as the `hazelcast.configurationFiles.hazelcast.xml` property.
+Custom Hazelcast configuration can be specified inside `values.yaml`, as the `hazelcast.configurationFiles.hazelcastXml` property.
 
 ```yaml
 hazelcast:
   configurationFiles:
-    hazelcast.xml: |-
+    hazelcastXml: |-
       <?xml version="1.0" encoding="UTF-8"?>
       <hazelcast xsi:schemaLocation="http://www.hazelcast.com/schema/config hazelcast-config-3.10.xsd"
                      xmlns="http://www.hazelcast.com/schema/config"

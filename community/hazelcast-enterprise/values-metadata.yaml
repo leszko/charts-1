@@ -87,9 +87,9 @@ hazelcast:
     __metadata:
       label: "Hazelcast Configuration Files"
       description: "Hazelcast Configuration Files"
-    hazelcast.xml:
+    hazelcastXml:
       __metadata:
-        name: "hazelcast.xml"
+        name: "hazelcastXml"
         label: "Hazelcast XML Configuration"
         description: "XML file content to configure Hazelcast"
         type: "string"
